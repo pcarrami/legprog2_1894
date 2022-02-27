@@ -9,7 +9,7 @@
 			<label>TUTORES</label>
 		</header>
 		<div class="col-lg-8">
-			<h1>AGREGAR TUTOR</h1>
+			<h1>AGREGAR TUTOR - ${usuario.id_usuario}</h1>
 			<% List<Provincia> lstProvincias = (List<Provincia>) request.getAttribute("lstProvincias"); %>
 			<form action="./tutores" method="post">
 				ID: <br>

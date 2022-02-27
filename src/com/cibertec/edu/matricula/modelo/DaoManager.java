@@ -26,6 +26,7 @@ public class DaoManager implements IDaoManager{
 	private ICarreraDao carreraDao = null;
 	private IProvinciaDao provinciaDao =  null;
 	private ITutorDao tutorDao =  null;
+	private IUsuarioDao usuarioDao =  null;
 
 	@Override
 	public IDepartamentoDao getDepartamentoDao() {
@@ -61,6 +62,15 @@ public class DaoManager implements IDaoManager{
 		}
 		
 		return tutorDao;
+	}
+
+	@Override
+	public IUsuarioDao getUsuarioDao() {
+		if(usuarioDao==null) {
+			usuarioDao = new UsuarioDao(cn);
+		}
+		
+		return usuarioDao;
 	}
 
 }

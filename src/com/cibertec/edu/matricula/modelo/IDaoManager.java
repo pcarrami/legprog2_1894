@@ -5,4 +5,5 @@ public interface IDaoManager {
 	ICarreraDao getCarreraDao();
 	IProvinciaDao getProvinciaDao();
 	ITutorDao getTutorDao();
+	IUsuarioDao getUsuarioDao();
 }

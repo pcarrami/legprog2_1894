@@ -5,7 +5,7 @@
 		<label>DEPARTAMENTOS</label>
 		</header>
 		<div class="col-lg-8">
-			<h1>AGREGAR DEPARTAMENTO</h1>
+			<h1>AGREGAR DEPARTAMENTO  - ${usuario.nombre}</h1>
 			
 			<form action="./departamentos" method="post">
 				ID: <br>

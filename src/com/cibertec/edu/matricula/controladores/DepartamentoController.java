@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.cibertec.edu.matricula.entidades.Departamento;
 import com.cibertec.edu.matricula.servicios.DepartamentoService;
@@ -34,12 +35,14 @@ public class DepartamentoController extends HttpServlet {
 		String acceso="";
 		String accion = request.getParameter("accion");
 		servicio = new DepartamentoService();
+		HttpSession session = request.getSession(true);
 		try {
 			if(accion.equalsIgnoreCase("listar")){
 				List<Departamento> lista = servicio.listar();
 				request.setAttribute("lista", lista);
 				acceso = url_list;
 			}else if(accion.equalsIgnoreCase("add")) {
+				//request.getSession().setAttribute("usuario", request.getAttribute("usuario"));
 				acceso=url_add;
 			}else if(accion.equalsIgnoreCase("agregar")) {
 				Integer id_depa;
